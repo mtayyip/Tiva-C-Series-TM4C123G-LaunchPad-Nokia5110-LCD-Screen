@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;5510lcd/bitmapPhotos&apos; to &apos;bitmapPhotos.h&apos;" description="Rename resource &apos;bitmapPhotos&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bitmapPhotos" name="bitmapPhotos.h" stamp="1540731691756" updateReferences="true"/>
+</session>

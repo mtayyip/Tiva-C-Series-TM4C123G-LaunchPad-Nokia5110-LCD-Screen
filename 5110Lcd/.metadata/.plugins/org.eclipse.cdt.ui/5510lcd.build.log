@@ -1,0 +1,32 @@
+
+**** Build of configuration Debug for project 5510lcd ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Muhammet Tayyip/Desktop/TIVA C/5110Lcd/5510lcd" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 20: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 23: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 26: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 29: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 32: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 35: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 38: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 41: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 44: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 47: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 50: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 53: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 56: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 59: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+"../main.c", line 62: warning #169-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+'Finished building: ../main.c'
+' '
+'Building target: 5510lcd.out'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"5510lcd.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="5510lcd_linkInfo.xml" --rom_model -o "5510lcd.out" "./Nokia5110.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+'Finished building target: 5510lcd.out'
+' '
+
+**** Build Finished ****

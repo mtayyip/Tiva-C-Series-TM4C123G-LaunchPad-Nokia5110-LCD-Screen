@@ -1,0 +1,298 @@
+******************************************************************************
+                  TI ARM Linker PC v16.9.7                     
+******************************************************************************
+>> Linked Sun Oct 28 16:57:07 2018
+
+OUTPUT FILE NAME:   <5510lcd.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00000bb1
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00001be0  0003e420  R  X
+  SRAM                  20000000   00008000  00001fa0  00006060  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001be4   00001be4    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00000a8c   00000a8c    r-x .text
+  00000cf8    00000cf8    0000024c   0000024c    r-- .const
+  00000f48    00000f48    00000c9c   00000c9c    r-- .cinit
+20000000    20000000    00001fa0   00000000    rw-
+  20000000    20000000    00001da0   00000000    rw- .data
+  20001da0    20001da0    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    00000a8c     
+                  0000026c    000004a8     Nokia5110.obj (.text)
+                  00000714    00000124     main.obj (.text)
+                  00000838    00000110     driverlib.lib : sysctl.obj (.text:SysCtlClockGet)
+                  00000948    000000f4                   : sysctl.obj (.text:SysCtlClockSet)
+                  00000a3c    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00000ad8    00000070                                   : autoinit.obj (.text)
+                  00000b48    00000068                                   : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  00000bb0    00000054                                   : boot.obj (.text)
+                  00000c04    00000054                                   : exit.obj (.text)
+                  00000c58    0000004c                                   : cpy_tbl.obj (.text)
+                  00000ca4    00000018                                   : args_main.obj (.text)
+                  00000cbc    00000014                                   : _lock.obj (.text)
+                  00000cd0    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  00000cde    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00000cea    00000006     driverlib.lib : sysctl.obj (.text:SysCtlDelay)
+                  00000cf0    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.obj (.text)
+                  00000cf4    00000002                                   : mpu_init.obj (.text)
+                  00000cf6    00000002                                   : startup.obj (.text)
+
+.const     0    00000cf8    0000024c     
+                  00000cf8    000001e0     Nokia5110.obj (.const:ASCII)
+                  00000ed8    0000006c     driverlib.lib : sysctl.obj (.const:g_pui32Xtals)
+
+.cinit     0    00000f48    00000c9c     
+                  00000f48    00000c8c     (.cinit..data.load) [load image, compression = lzss]
+                  00001bd4    00000008     (__TI_handler_table)
+                  00001bdc    00000008     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.data      0    20000000    00001da0     UNINITIALIZED
+                  20000000    000001f8     main.obj (.data:apple)
+                  200001f8    000001f8     main.obj (.data:batman)
+                  200003f0    000001f8     main.obj (.data:einstein)
+                  200005e8    000001f8     main.obj (.data:git)
+                  200007e0    000001f8     main.obj (.data:lego)
+                  200009d8    000001f8     main.obj (.data:marrow)
+                  20000bd0    000001f8     main.obj (.data:owl)
+                  20000dc8    000001f8     main.obj (.data:panda)
+                  20000fc0    000001f8     main.obj (.data:plane)
+                  200011b8    000001f8     main.obj (.data:rocket)
+                  200013b0    000001f8     main.obj (.data:sunshine)
+                  200015a8    000001f8     main.obj (.data:superman)
+                  200017a0    000001f8     main.obj (.data:toy)
+                  20001998    000001f8     main.obj (.data:toyBear)
+                  20001b90    000001f8     main.obj (.data:turkiye)
+                  20001d88    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  20001d94    00000008                                   : _lock.obj (.data:$O1$$)
+                  20001d9c    00000004                                   : stkdepth_vars.obj (.data)
+
+.stack     0    20001da0    00000200     UNINITIALIZED
+                  20001da0    00000200     --HOLE--
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       main.obj                       292    0         7560   
+       Nokia5110.obj                  1192   480       0      
+       tm4c123gh6pm_startup_ccs.obj   12     620       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         1496   1100      7560   
+                                                              
+    C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib
+       sysctl.obj                     522    108       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         522    108       0      
+                                                              
+    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.obj                  156    0         0      
+       autoinit.obj                   112    0         0      
+       copy_decompress_lzss.obj       104    0         0      
+       exit.obj                       84     0         12     
+       boot.obj                       84     0         0      
+       cpy_tbl.obj                    76     0         0      
+       _lock.obj                      20     0         8      
+       args_main.obj                  24     0         0      
+       copy_decompress_none.obj       14     0         0      
+       pre_init.obj                   4      0         0      
+       stkdepth_vars.obj              0      0         4      
+       mpu_init.obj                   2      0         0      
+       startup.obj                    2      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         682    0         24     
+                                                              
+       Stack:                         0      0         512    
+       Linker Generated:              0      3228      0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   2700   4436      8096   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001bdc records: 1, size/record: 8, table size: 8
+	.data: load addr=00000f48, load size=00000c8c bytes, run addr=20000000, run size=00001da0 bytes, compression=lzss
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00001bd4 records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                           
+-------   ----                           
+00000c05  C$$EXIT                        
+00000699  Nokia5110_Clear                
+000006cd  Nokia5110_DrawFullImage        
+000002b9  Nokia5110_Init                 
+000003d3  Nokia5110_OutChar              
+00000419  Nokia5110_OutString            
+00000445  Nokia5110_OutUDec              
+0000064d  Nokia5110_SetCursor            
+00000cdf  ResetISR                       
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+00000839  SysCtlClockGet                 
+00000949  SysCtlClockSet                 
+00000ceb  SysCtlDelay                    
+20001fa0  __STACK_END                    
+00000200  __STACK_SIZE                   
+20001fa0  __STACK_TOP                    
+00001bdc  __TI_CINIT_Base                
+00001be4  __TI_CINIT_Limit               
+00001bd4  __TI_Handler_Table_Base        
+00001bdc  __TI_Handler_Table_Limit       
+00000ad9  __TI_auto_init                 
+20001d88  __TI_cleanup_ptr               
+00000b49  __TI_decompress_lzss           
+00000cd1  __TI_decompress_none           
+20001d8c  __TI_dtors_ptr                 
+20001d90  __TI_enable_exit_profile_output
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+00000000  __TI_static_base__             
+00000a3d  __aeabi_memcpy                 
+00000a3d  __aeabi_memcpy4                
+00000a3d  __aeabi_memcpy8                
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+00000cf5  __mpu_init                     
+20001da0  __stack                        
+00000ca5  _args_main                     
+00000bb1  _c_int00                       
+20001d94  _lock                          
+00000ccb  _nop                           
+00000cc3  _register_lock                 
+00000cbd  _register_unlock               
+00000cf7  _system_post_cinit             
+00000cf1  _system_pre_init               
+20001d98  _unlock                        
+00000c09  abort                          
+20000000  apple                          
+200001f8  batman                         
+ffffffff  binit                          
+00000c59  copy_in                        
+200003f0  einstein                       
+00000c11  exit                           
+00000000  g_pfnVectors                   
+200005e8  git                            
+200007e0  lego                           
+00000715  main                           
+20001d9c  main_func_sp                   
+200009d8  marrow                         
+00000a3d  memcpy                         
+20000bd0  owl                            
+20000dc8  panda                          
+20000fc0  plane                          
+200011b8  rocket                         
+200013b0  sunshine                       
+200015a8  superman                       
+200017a0  toy                            
+20001998  toyBear                        
+20001b90  turkiye                        
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                           
+-------   ----                           
+00000000  __TI_static_base__             
+00000000  g_pfnVectors                   
+00000200  __STACK_SIZE                   
+000002b9  Nokia5110_Init                 
+000003d3  Nokia5110_OutChar              
+00000419  Nokia5110_OutString            
+00000445  Nokia5110_OutUDec              
+0000064d  Nokia5110_SetCursor            
+00000699  Nokia5110_Clear                
+000006cd  Nokia5110_DrawFullImage        
+00000715  main                           
+00000839  SysCtlClockGet                 
+00000949  SysCtlClockSet                 
+00000a3d  __aeabi_memcpy                 
+00000a3d  __aeabi_memcpy4                
+00000a3d  __aeabi_memcpy8                
+00000a3d  memcpy                         
+00000ad9  __TI_auto_init                 
+00000b49  __TI_decompress_lzss           
+00000bb1  _c_int00                       
+00000c05  C$$EXIT                        
+00000c09  abort                          
+00000c11  exit                           
+00000c59  copy_in                        
+00000ca5  _args_main                     
+00000cbd  _register_unlock               
+00000cc3  _register_lock                 
+00000ccb  _nop                           
+00000cd1  __TI_decompress_none           
+00000cdf  ResetISR                       
+00000ceb  SysCtlDelay                    
+00000cf1  _system_pre_init               
+00000cf5  __mpu_init                     
+00000cf7  _system_post_cinit             
+00001bd4  __TI_Handler_Table_Base        
+00001bdc  __TI_CINIT_Base                
+00001bdc  __TI_Handler_Table_Limit       
+00001be4  __TI_CINIT_Limit               
+20000000  apple                          
+200001f8  batman                         
+200003f0  einstein                       
+200005e8  git                            
+200007e0  lego                           
+200009d8  marrow                         
+20000bd0  owl                            
+20000dc8  panda                          
+20000fc0  plane                          
+200011b8  rocket                         
+200013b0  sunshine                       
+200015a8  superman                       
+200017a0  toy                            
+20001998  toyBear                        
+20001b90  turkiye                        
+20001d88  __TI_cleanup_ptr               
+20001d8c  __TI_dtors_ptr                 
+20001d90  __TI_enable_exit_profile_output
+20001d94  _lock                          
+20001d98  _unlock                        
+20001d9c  main_func_sp                   
+20001da0  __stack                        
+20001fa0  __STACK_END                    
+20001fa0  __STACK_TOP                    
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+ffffffff  binit                          
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+
+[70 symbols]
