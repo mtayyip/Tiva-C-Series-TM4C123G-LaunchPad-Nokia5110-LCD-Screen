@@ -18,7 +18,16 @@ int main (void)
     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_PLL | SYSCTL_OSC_INT | SYSCTL_XTAL_16MHZ);
 
     Nokia5110_Clear();
+    
+    /*Nokia5110_Clear();
+    Nokia5110_SetCursor(0, 0);
+    Nokia5110_OutString("MUHAMMET");
 
+    Nokia5110_SetCursor(0, 1);
+    Nokia5110_OutString("TAYYIP");
+
+    Nokia5110_SetCursor(0, 2);
+    Nokia5110_OutString("CANKAYA");*/
 
     while(1){
         Nokia5110_DrawFullImage(sunshine);
@@ -67,15 +76,4 @@ int main (void)
         SysCtlDelay(SysCtlClockGet());
 
     }
-
-    /*Nokia5110_Clear();
-    Nokia5110_SetCursor(0, 0);
-    Nokia5110_OutString("MUHAMMET");
-
-    Nokia5110_SetCursor(0, 1);
-    Nokia5110_OutString("TAYYIP");
-
-    Nokia5110_SetCursor(0, 2);
-    Nokia5110_OutString("CANKAYA");*/
-
 }
